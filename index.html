@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>DrawBoard</title>
+<script type="application/x-javascript" language="JavaScript" src="javascripts/drawboard.js"></script>
+<link rel="stylesheet" type="text/css" href="stylesheets/drawboard.css">
+</head>
+
+<body onload="init()">
+<!--<div id="logo"><strong>DrawBoard</div>-->
+<div id="wrapper">
+	<canvas id="canvas"
+		onDblClick='getDrawBoardImage(); clearDrawBoard();'
+		onMouseDown='toggleDrawing()' 
+		onMouseUp='toggleDrawing()'
+		onClick='drawPoint(window.event.offsetX, window.event.offsetY, 1)'
+		onMouseMove='draw(window.event.offsetX, window.event.offsetY)'></canvas>
+	<div id="pointsDrawnList"></div>
+</div>
+</body>
+</html>
