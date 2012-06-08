@@ -1,3 +1,4 @@
+var canvas = null
 var context = null
 var drawing = false
 var fluidPoints = []
@@ -5,7 +6,7 @@ var discretePoints = []
 var lastPoint = null
 
 function init() {
-	var canvas = document.getElementById('canvas')
+	canvas = document.getElementById('canvas')
 	if(canvas.getContext('2d')) {
 		context = canvas.getContext('2d')
 		canvas.width = window.innerWidth-4
